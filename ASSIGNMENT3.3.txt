@@ -1,0 +1,82 @@
+List the components of hadoop2.X and explain each component in detail
+
+The components of Hadoop 2.X are :
+ *HDFS 
+
+ *YARN
+ 
+
+
+ * HDFS: 
+
+   It is the Hadoop Distributed File System . It is where the big data is stored using comodity hardware.
+
+   NAMENODE : 
+
+   * It is placed in the master node and stores meta data .
+
+   * This process runs on a cluster . 
+
+   * It reads all metadata from a file named fsimage and stores in memory .
+
+   * It periodically writes the changes to one file named editas edit logs .
+
+   SECONDARY NAMENODE :
+
+   * It can run on a master node or on a seperate node depends on the size of the cluster .
+ 
+   * It manages the metadata for the name node .  
+
+   DATA NODE :
+
+   * They are placed in slave nodes . 
+ 
+   * It stores data in data slots of 64MB by default . 
+  
+   * It periodically sends heart bits to Name node to show that slave process is running .
+
+
+
+
+
+
+ * YARN :
+
+   The YARN consists of resource manager and node manager which are responsible for executing distributed data computation job in hadoop .
+
+  RESOURCE MANAGER :
+   
+   * This process runs on master node .
+   
+   * It takes care of sumbmitting job from client and schedules it .
+
+   * It monitors the running job and allocates resources on slave node .
+  
+   * It tracks the resource utilization with the help of node manager . 
+  
+   * It uses Application Manager and Scheduler . 
+  
+  Sheduler - 
+   * It carries out scheduling . 
+  
+   * Responsible to schedule required resources to Applications .
+
+   Application Master :
+   
+   * Interacts with resource manager scheduler and node manager .
+
+   * Interacts with node manager for executing taks and monitors it . 
+   
+   *Interacts with Scheduler to get resources . 
+
+ NODE MANAGER
+
+  * Runs on slave nodes .
+  
+  *It coordinates with Resource manager for task scheduling and traking resource utilization .
+  
+  * Monitors each resource utilization . 
+
+  * It is used in excution of slave node . 
+  
+ 
